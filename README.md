@@ -1,7 +1,7 @@
-# ➤ Variable Robot Impedance Modulation
+# ➤ Robot Impedance Modulation
 
 ## Introduction
-**Variable Robot Impedance Modulation** is a **ROS2** based package aimed to help the community in calculating a _variable_ impedance of a robot. 
+**Robot Impedance Modulation** is a **ROS2** based package aimed to help the community in calculating a _variable_ impedance of a robot. 
 Considering a robot having SEA motors, typically used for collaborative robots (Cobots), or a general robot controlled with the following control law
 
 $$
