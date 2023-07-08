@@ -175,7 +175,7 @@ liana:~/ros2_humble$ ros2 launch rim impedance_modulation.launch.py
 If yes, then your package is listening to messages and ready to compute the impedance.
 
 ## Dependences
-The Variable Robot Impedance Modulation requires the following dependencies:
+The Robot Impedance Modulation requires the following dependencies:
 * [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page): to handle with basic algebra;
 * [MatLogger2](https://github.com/ADVRHumanoids/MatLogger2): to log data;
 * [KDL](https://www.orocos.org/kdl.html): to handle robot quantities.
