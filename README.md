@@ -128,7 +128,7 @@ The values here are just an example. You have to make the proper changes. Please
 ## Installation
 **To Install** Variable Impedance Modulation Package run
 ```console
-git clone https://github.com/ADVRHumanoids/VariableImpedanceRegulation.git
+git clone https://github.com/lia2790/RobotImpedanceModulation.git
 ```
 inside the _**src folder**_ of the workspace run
 ```console
