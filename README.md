@@ -141,6 +141,37 @@ To execute the code, just run:
 ros2 launch rim impedance_modulation.launch.py
 ```
 
+Remember to source `install/setup.sh`, by simply
+```bash
+source install/setup.sh
+```
+inside the principal folder. If everything has been properly set, you should have an output similar to
+```bash
+liana:~/ros2_humble$ ros2 launch rim impedance_modulation.launch.py 
+[INFO] [launch]: All log files can be found below /home/liana/.ros/log/2023-07-08-15-45-00-723821-liana-MS-7820-20325
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ImpedanceModulation-1]: process started with pid [20326]
+[ImpedanceModulation-1] [INFO] [1688823900.952604282] [robot.impedance_settings]: I am initializing the ROS node...
+[ImpedanceModulation-1] 
+[ImpedanceModulation-1] Worked for 0.00 sec (0.0 MB flushed)....average load is -nan 
+[ImpedanceModulation-1] [INFO] [1688823900.983917845] [robot.impedance_settings]: I am loading the ROS node params...
+[ImpedanceModulation-1] 
+[ImpedanceModulation-1] [INFO] [1688823900.990769844] [robot.impedance_settings]: I am initializing the robot impedance...
+[ImpedanceModulation-1] 
+[ImpedanceModulation-1] Created variable 'EEwrench' (20 blocks, 500 elem each)
+[ImpedanceModulation-1] Created variable 'EETaskwrench' (20 blocks, 500 elem each)
+[ImpedanceModulation-1] Created variable 'TaskErrorDesired' (20 blocks, 500 elem each)
+[ImpedanceModulation-1] Created variable 'CartesianStiffness' (20 blocks, 500 elem each)
+[ImpedanceModulation-1] Created variable 'JointStiffness' (20 blocks, 500 elem each)
+[ImpedanceModulation-1] Created variable 'JointDamping' (20 blocks, 500 elem each)
+[ImpedanceModulation-1] Created variable 'FeedforwardTorque' (20 blocks, 500 elem each)
+[ImpedanceModulation-1] Created variable 'JointsPosition' (20 blocks, 500 elem each)
+[ImpedanceModulation-1] Created variable 'JointsPositionReference' (20 blocks, 500 elem each)
+[ImpedanceModulation-1] Worked for 0.02 sec (2.6 MB flushed)....average load is 0.00 
+[ImpedanceModulation-1] ------------------------------------------------------------------------------
+[ImpedanceModulation-1] Robot Impedance Modulation started! Ready to accept task planning...
+```
+
 ## Dependences
 The Variable Robot Impedance Modulation requires the following dependences:
 * [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page): to handle with basic algebra;
