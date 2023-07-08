@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(impedance_modulation)
+project(rim)
 
 # c++ compiler
 if(NOT CMAKE_CXX_STANDARD) #Default to C++14
