@@ -131,7 +131,7 @@ The values here are just an example. You have to make the proper changes. Please
 git clone https://github.com/ADVRHumanoids/VariableImpedanceRegulation.git
 ```
 inside the _**src folder**_ of the workspace run
-```bash
+```console
 colcon build
 ```
 
