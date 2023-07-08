@@ -49,8 +49,8 @@ void ImpedanceModulationManager::initROSNode()
     _nh->declare_parameter("topic_publisher_name","robot_IM_planner");
     _nh->get_parameter("topic_subscriber_name",_topicSub);
     _nh->get_parameter("topic_publisher_name",_topicPub);
-    _taskSubscriber = _nh->create_subscription<impedance_modulation::msg::TaskMsg>(_topicSub,1, std::bind(&ImpedanceModulationManager::TaskParamSubscriberCallback, this, _1));
-    _robotPublisher = _nh->create_publisher<impedance_modulation::msg::ImpedanceMsg>(_topicPub,1000);
+    _taskSubscriber = _nh->create_subscription<rim::msg::TaskMsg>(_topicSub,1, std::bind(&ImpedanceModulationManager::TaskParamSubscriberCallback, this, _1));
+    _robotPublisher = _nh->create_publisher<rim::msg::ImpedanceMsg>(_topicPub,1000);
 
     // logger
     _nh->declare_parameter("log_path","/tmp/");
@@ -301,7 +301,7 @@ void ImpedanceModulationManager::spin()
     rclcpp::spin(_nh);
 }
 
-void ImpedanceModulationManager::TaskParamSubscriberCallback(const impedance_modulation::msg::TaskMsg::SharedPtr msg)
+void ImpedanceModulationManager::TaskParamSubscriberCallback(const rim::msg::TaskMsg::SharedPtr msg)
 {
     // task param : inputs
     if(msg->cartesian_space)

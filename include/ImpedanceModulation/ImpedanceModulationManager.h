@@ -21,8 +21,8 @@
 // ROS 
 #include <sstream>
 #include "rclcpp/rclcpp.hpp"
-#include "impedance_modulation/msg/task_msg.hpp"
-#include "impedance_modulation/msg/impedance_msg.hpp"
+#include "rim/msg/task_msg.hpp"
+#include "rim/msg/impedance_msg.hpp"
 
 // utils
 #include <ImpedanceModulation/utils/KDLhelper.h>
@@ -94,7 +94,7 @@ private:
      *  subscribe task params
      *  @return void
      */
-    void TaskParamSubscriberCallback(const impedance_modulation::msg::TaskMsg::SharedPtr msg);
+    void TaskParamSubscriberCallback(const rim::msg::TaskMsg::SharedPtr msg);
     /**
      * create robot message
      * @return void
@@ -121,8 +121,8 @@ private:
     //  ROS ----------------------------------------------------------------
     rclcpp::Node::SharedPtr _nh; /* ROSE node handle */
     rclcpp::TimerBase::SharedPtr _timer;
-    rclcpp::Subscription<impedance_modulation::msg::TaskMsg>::SharedPtr _taskSubscriber; /* ROS topic object model subscriber */
-    rclcpp::Publisher<impedance_modulation::msg::ImpedanceMsg>::SharedPtr _robotPublisher; /* ROS topic torques publisher */
+    rclcpp::Subscription<rim::msg::TaskMsg>::SharedPtr _taskSubscriber; /* ROS topic object model subscriber */
+    rclcpp::Publisher<rim::msg::ImpedanceMsg>::SharedPtr _robotPublisher; /* ROS topic torques publisher */
     std::string _topicSub;
     std::string _topicPub;
     double _rate;
@@ -180,7 +180,7 @@ private:
 
     double _ref_time;
 
-    impedance_modulation::msg::ImpedanceMsg _robotMsg;
+    rim::msg::ImpedanceMsg _robotMsg;
 
     // IM status --------------------------------------------------------
     bool _subscribed;
