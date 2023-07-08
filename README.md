@@ -127,7 +127,7 @@ The values here are just an example. You have to make the proper changes. Please
 
 ## Installation
 **To Install** Variable Impedance Modulation Package run
-```bash
+```console
 git clone https://github.com/ADVRHumanoids/VariableImpedanceRegulation.git
 ```
 inside the _**src folder**_ of the workspace run
@@ -137,16 +137,16 @@ colcon build
 
 ## Execution
 To execute the code, just run:
-```bash
+```console
 ros2 launch rim impedance_modulation.launch.py
 ```
 
 Remember to source `install/setup.sh`, by simply
-```bash
+```console
 source install/setup.sh
 ```
 inside the principal folder. If everything has been properly set, you should have an output similar to
-```bash
+```console
 liana:~/ros2_humble$ ros2 launch rim impedance_modulation.launch.py 
 [INFO] [launch]: All log files can be found below /home/liana/.ros/log/2023-07-08-15-45-00-723821-liana-MS-7820-20325
 [INFO] [launch]: Default logging verbosity is set to INFO
@@ -171,6 +171,8 @@ liana:~/ros2_humble$ ros2 launch rim impedance_modulation.launch.py
 [ImpedanceModulation-1] ------------------------------------------------------------------------------
 [ImpedanceModulation-1] Robot Impedance Modulation started! Ready to accept task planning...
 ```
+
+If yes, then your package is listening messages and ready to compute the impedance.
 
 ## Dependences
 The Variable Robot Impedance Modulation requires the following dependences:
