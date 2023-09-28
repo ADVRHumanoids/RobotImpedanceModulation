@@ -14,6 +14,7 @@ find_package(rclcpp REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 # external
+find_package(urdf REQUIRED)
 find_package(orocos_kdl REQUIRED)
 find_package(kdl_parser REQUIRED)
 find_package(Eigen3 REQUIRED)
@@ -65,12 +66,11 @@ target_link_libraries(Utilities
   Algebra
 )
 
-rosidl_get_typesupport_target(cpp_typesupport_target
+rosidl_target_interfaces(ImpedanceModulationManager # Link against the interface
   ${PROJECT_NAME} rosidl_typesupport_cpp)
 
 # VIM plugin settings
 target_link_libraries(ImpedanceModulationManager
-  "${cpp_typesupport_target}"
   KDLHelper
   Algebra
   Utilities
