@@ -8,7 +8,7 @@ $$
 \tau = K \\, (q^{ref} - q) - D \dot q + \tau^{ff},
 $$
 
-the package provides the required **stiffness $K$** and **damping $D$** (diagonal matrices) to be set in the motors or equivalently used to compute such a control law. By defining the 
+the package provides the required **stiffness KK** and **damping DD** (diagonal matrices) to be set in the motors or equivalently used to compute such a control law. By defining the 
 required force and admissible error crucial for task execution, the robot impedance is accordingly designed. For further details on the algorithm, you can have a look at the related article 
 available [**_here_**](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10000215).
 
@@ -28,7 +28,7 @@ available [**_here_**](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1000
 Here, an explanation of how to use the package is given. We start by providing the rationale behind it, and then we detail the practical usage. 
 
 As mentioned in the introduction, this package allows you to directly obtain the impedance parameters of a robot, i.e. the values of 
-stiffness and damping for each joint _"j"_ of the robot, $k_j$ and $d_j$, respectively. These values can be used either to set the motor parameters or to calculate the above control law. 
+stiffness and damping for each joint _"j"_ of the robot, kjk_j and djd_j, respectively. These values can be used either to set the motor parameters or to calculate the above control law. 
 Classical approaches apply fixed values to design these parameters by a manual procedure of trials and errors. For real-time applications in dynamic environments, this procedure can not 
 properly generate suitable robot reactions based on occurring changes maybe leading to the failure of the task execution. 
 To overcome these drawbacks, here, the impedance modulation is intended to be designed in such a way as to _better_ fit with the task to accomplish. 
@@ -128,11 +128,11 @@ The values here are just an example. You have to make the proper changes. Please
 ## Installation
 **To Install** Variable Impedance Modulation Package run
 ```console
-git clone https://github.com/lia2790/RobotImpedanceModulation.git
+git clone https://github.com/ADVRHumanoids/RobotImpedanceModulation.git
 ```
 inside the _**src folder**_ of the workspace run
 ```console
-colcon build
+clcon build
 ```
 
 ## Execution
