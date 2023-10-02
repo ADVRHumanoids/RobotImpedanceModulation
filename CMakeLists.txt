@@ -85,11 +85,6 @@ ament_target_dependencies(KDLHelper kdl_parser)
 ament_target_dependencies(ImpedanceModulationManager ${dependencies})
 ament_export_dependencies(rosidl_default_runtime)
 
-# to allow to ros2 to find the executable
-install(TARGETS
-  ImpedanceModulation
-  DESTINATION lib/${PROJECT_NAME})
-
 # Install launch files.
 install(DIRECTORY
   launch
@@ -101,5 +96,10 @@ install(DIRECTORY
   config
   DESTINATION share/${PROJECT_NAME}
 )
+
+# to allow to ros2 to find the executable
+install(TARGETS
+  ImpedanceModulation
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

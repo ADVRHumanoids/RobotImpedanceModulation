@@ -7,18 +7,18 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
   config = os.path.join(
-      get_package_share_directory('impedance_modulation'),
+      get_package_share_directory('rim'),
       'config',
       'impedance_modulation_settings.yaml'
       )
   return LaunchDescription([
       Node(
-            package='impedance_modulation',
+            package='rim',
             executable='ImpedanceModulation',
             namespace='robot',
             name='impedance_settings',
             parameters=[config],
-            output="screen",
+            output='screen',
             emulate_tty=True
           )
     ])
