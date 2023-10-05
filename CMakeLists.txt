@@ -97,6 +97,9 @@ install(DIRECTORY
   DESTINATION share/${PROJECT_NAME}
 )
 
+# to enable ros bridge
+install(FILES mapping_rules.yaml DESTINATION share/${PROJECT_NAME})
+
 # to allow to ros2 to find the executable
 install(TARGETS
   ImpedanceModulation

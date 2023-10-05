@@ -13,7 +13,7 @@
 #  D = diag{d};
 #  tau = K * ( qdes - q ) - D * qdot + tauff
 
-
+float64[] joints_position_reference
 float64[] robot_stiffness
 float64[] robot_damping
 float64[] robot_feedforward_torque

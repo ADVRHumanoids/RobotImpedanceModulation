@@ -1,11 +1,11 @@
 /robot/impedance_settings:
   ros__parameters:
-    robot_initial_config: [0.0,-1.56,0.9,0.2,-0.5,1.12]
-    stiffness_preset: [100.0,100.0,100.0,100.0,100.0,100.0]
+    robot_initial_config: [-1.92193e-05,-0.831863,1.24199,1.57068,-3.18702e-06,-2.55242e-06]
+    stiffness_preset: [700.0,700.0,700.0,700.0,700.0,700.0]
     stiffness_constant: [200.0,200.0,200.0,200.0,200.0,200.0]
     stiffness_maximum: [2000.0,2000.0,2000.0,2000.0,2000.0,2000.0]
-    damping_preset: [100.0,100.0,100.0,100.0,100.0,100.0]
-    damping_maximum: [50.0,50.0,50.0,50.0,50.0,50.0]
+    damping_preset: [7.0,7.0,7.0,7.0,7.0,7.0]
+    damping_maximum: [40.0,40.0,40.0,40.0,40.0,40.0]
     wrench_initial: [0.0,0.0,0.0,0.0,0.0,0.0]
     precision_initial: [0.1,0.1,0.1,0.1,0.1,0.1]
     robot_urdf_model_path: "/home/liana/ros2_ws/src/ROS2UtilityNodes/urdf/inail2arm.urdf"
@@ -14,6 +14,6 @@
     topic_subscriber_name: "/robot/task_planning"
     topic_publisher_name: "ros2_impedance_planning"
     transition_time: 10.0
-    rate: 1000
+    rate: 5000
     log_path: "/tmp/impedance_planner"
     verbose: true

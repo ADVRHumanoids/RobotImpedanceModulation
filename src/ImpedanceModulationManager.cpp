@@ -264,6 +264,7 @@ void ImpedanceModulationManager::composeRobotMsg()
     _robotMsg.robot_stiffness = _utils.toStdVector(_k);
     _robotMsg.robot_damping = _utils.toStdVector(_d);
     _robotMsg.robot_feedforward_torque = _utils.toStdVector(_tau_ff);
+    _robotMsg.joints_position_reference = _utils.toStdVector(_qref);
 }
 
 void ImpedanceModulationManager::timer_callback()
