@@ -132,7 +132,7 @@ git clone https://github.com/ADVRHumanoids/RobotImpedanceModulation.git
 ```
 inside the _**src folder**_ of the workspace run
 ```console
-clcon build
+colcon build
 ```
 
 ## Execution
