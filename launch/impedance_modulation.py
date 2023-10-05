@@ -9,7 +9,7 @@ def generate_launch_description():
   config = os.path.join(
       get_package_share_directory('rim'),
       'config',
-      'impedance_modulation_settings.yaml'
+      'impedance_modulation_settings_inail2arm.yaml'
       )
   return LaunchDescription([
       Node(
