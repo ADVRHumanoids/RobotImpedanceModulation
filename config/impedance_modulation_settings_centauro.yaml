@@ -1,6 +1,6 @@
 /robot/impedance_settings:
   ros__parameters:
-    robot_initial_config: [0.520611,-0.319267,-0.27361,-2.23429,-0.0498677,-0.780707,0.0]
+    robot_initial_config: [0.521577,-0.32123,-0.274981,-2.23858,-0.0501384,-0.7823,0.0]
     stiffness_preset: [4000.0,4000.0,4000.0,4000.0,1000.0,1000.0,10.0]
     stiffness_constant: [200.0,200.0,200.0,200.0,200.0,200.0,5.0]
     stiffness_maximum: [4000.0,4000.0,4000.0,4000.0,4000.0,4000.0,10.0]
@@ -13,7 +13,7 @@
     robot_tip_frame_name: "arm2_8"
     topic_subscriber_name: "/robot/task_planning"
     topic_publisher_name: "ros2_impedance_planning"
-    transition_time: 10.0
-    rate: 5000
+    transition_time: 5.0
+    rate: 800
     log_path: "/tmp/impedance_planner"
-    verbose: true
+    verbose: false

@@ -116,6 +116,12 @@ void ImpedanceModulationManager::loadParam()
     _w_ee_d_initial = _utils.toEigen(w_ee_d_initial);
     _delta_x_ee_initial = _utils.toEigen(delta_x_ee_initial);
     _q = _utils.toEigen(q0);
+    _qref = _q;
+
+
+    std::cout << "----------------------------------------------------------------------" << std::endl;
+    std::cout << "Robot Initial Configuration: " << _q.transpose() << std::endl;
+    std::cout << "----------------------------------------------------------------------" << std::endl;
 
     _kdl.init(_robotURDFModelPath,_base,_endEffector);
     _kdl.setJointsPositions(_q);
@@ -135,7 +141,6 @@ void ImpedanceModulationManager::initVars()
 
     // joint space
     _nj = _k_0.size();
-    _qref = Eigen::VectorXd::Zero(_nj);
     _qerr = Eigen::VectorXd::Zero(_nj);
 
     _k = Eigen::VectorXd::Zero(_nj);    
@@ -180,12 +185,11 @@ void ImpedanceModulationManager::initRobotImpedance()
         _tau_g = ( 1 - t ) * Eigen::VectorXd::Zero(_nj) +  t * taug;     
         _w_ee_td = ( 1 - t ) * Eigen::VectorXd::Zero(_nc) +  t * _w_ee_d_initial;     
 
-        std::cout << "3 ..." << std::endl;
         _w_ee_g = _J_invT * _tau_g;
         
-        _w_ee_d = _w_ee_g + _w_ee_td;     std::cout << "5 ..." << std::endl;
-        _w_ee_d = _w_ee_d.cwiseAbs();     std::cout << "6 ..." << std::endl;
-        _k_c_d = _w_ee_d.cwiseProduct(_delta_x_ee_initial.cwiseInverse());     std::cout << "7 ..." << std::endl;
+        _w_ee_d = _w_ee_g + _w_ee_td;
+        _w_ee_d = _w_ee_d.cwiseAbs();
+        _k_c_d = _w_ee_d.cwiseProduct(_delta_x_ee_initial.cwiseInverse());
         _K_C_d = _k_c_d.asDiagonal();
         _K_J = _K_0 + _J.transpose() * _K_C_d * _J;
 
