@@ -1,14 +1,14 @@
 /robot/impedance_settings:
   ros__parameters:
     robot_initial_config: [0.520611,-0.319267,-0.27361,-2.23429,-0.0498677,-0.780707,0.0]
-    stiffness_preset: [4000.0,4000.0,4000.0,4000.0,1000.0,1000.0,10.0]
+    stiffness_preset: [500.0,500.0,500.0,500.0,250.0,250.0,50.0]
     stiffness_constant: [200.0,200.0,200.0,200.0,200.0,200.0,5.0]
     stiffness_maximum: [4000.0,4000.0,4000.0,4000.0,4000.0,4000.0,10.0]
     damping_preset: [40.0,40.0,40.0,40.0,10.0,10.0,0.5]
     damping_maximum: [70.0,70.0,70.0,70.0,70.0,70.0,1.5]
     wrench_initial: [0.0,0.0,0.0,0.0,0.0,0.0]
     precision_initial: [0.1,0.1,0.1,0.1,0.1,0.1]
-    robot_urdf_model_path: "/home/liana/catkin4ros2_ws/src/iit-centauro-ros-pkg/centauro_urdf/urdf/centauro.urdf"
+    robot_urdf_model_path: "/home/tori4friend/cat4ros2_ws/src/iit-centauro-ros-pkg/centauro_urdf/urdf/centauro.urdf"
     robot_base_frame_name: "torso_2"
     robot_tip_frame_name: "arm2_8"
     topic_subscriber_name: "/robot/task_planning"
