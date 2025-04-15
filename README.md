@@ -10,7 +10,7 @@ $$
 
 the package provides the required **stiffness KK** and **damping DD** (diagonal matrices) to be set in the motors or equivalently used to compute such a control law. By defining the 
 required force and admissible error crucial for task execution, the robot impedance is accordingly designed. For further details on the algorithm, you can have a look at the related article 
-available [**_here_**](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10000215).
+available [**_here_**](https://ieeexplore.ieee.org/abstract/document/10000215).
 
 
 ## Outline
